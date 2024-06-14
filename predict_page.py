@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np
 import joblib
 import streamlit as st
-from st_pages import add_page_title
 import time
 
+st.logo('logo.png')
 
 X = ['Application_mode', 'Course', 'Fathers_qualification', 'Mothers_qualification', 'Fathers_occupation', 'Mothers_occupation', 'Scholarship_holder',
      'Tuition_fees_up_to_date', 'Curricular_units_1st_sem_approved', 'Curricular_units_1st_sem_grade', 'Curricular_units_2nd_sem_approved',

@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+st.logo('logo.png')
+
 st.title('Explore Student Data')
 
 explore_df = pd.read_csv('explore_df.csv')

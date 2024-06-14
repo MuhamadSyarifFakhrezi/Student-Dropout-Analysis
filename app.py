@@ -1,9 +1,5 @@
 import streamlit as st
-import streamlit.components.v1 as components
-import pandas as pd
-from PIL import Image
-import joblib
-from st_pages import Page, add_page_title, show_pages
+from st_pages import Page, show_pages
 
 st.logo('logo.png')
 

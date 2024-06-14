@@ -3,10 +3,7 @@ from st_pages import Page, show_pages
 from PIL import Image
 
 
-img = Image.open('image.png')
-logo = Image.open('logo.png')
-
-st.logo(logo)
+st.logo('logo.png')
 
 show_pages([
      Page("app.py", "Home", "🏠"),
@@ -14,7 +11,7 @@ show_pages([
      Page("explore_page.py", "Explore", "🔍")
     ])
 
-st.image(img)
+st.image('image.png')
 
 st.markdown('''
          This Web Application is designed to help predict students in completing their studies based on some inputted information related

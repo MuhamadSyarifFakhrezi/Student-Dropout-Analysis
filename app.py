@@ -6,7 +6,7 @@ st.logo('logo.png')
 show_pages([
      Page("app.py", "Home", "🏠"),
      Page("predict_page.py", "Predict", ":male-student:"),
-     Page("Explore_page.py", "Explore", "🔍")
+     Page("explore_page.py", "Explore", "🔍")
     ])
 
 st.image('image.png')

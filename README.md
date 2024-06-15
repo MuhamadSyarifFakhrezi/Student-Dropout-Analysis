@@ -9,7 +9,7 @@ Selain dashboard yang diminta untuk memonitor performa siswanya, kita perlu memb
 
 ### Permasalahan Bisnis
 
-Hingga saat ini tingkat dropout siswa mencapai lebih dari 30%, jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar untuk sebuah institusi pendidikan. Jika tidak segera diselesaikan dan terus berlanjut, ini dapat memperburuk citra institusi pendidikan kedepannya.
+Hingga saat ini tingkat dropout siswa mencapai lebih dari 30%, jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar untuk sebuah institusi pendidikan. Jika tidak segera diselesaikan dan terus berlanjut, ini dapat memperburuk citra institusi kedepannya.
 
 ### Cakupan Proyek
 

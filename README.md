@@ -4,12 +4,12 @@
 
 Jaya Jaya Institut merupakan salah satu institusi pendidikan perguruan yang telah berdiri sejak tahun 2000. Hingga saat ini ia telah mencetak banyak lulusan dengan reputasi yang sangat baik. Akan tetapi, terdapat banyak juga siswa yang tidak menyelesaikan pendidikannya alias dropout.
 
-Jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar untuk sebuah institusi pendidikan. Oleh karena itu, Jaya Jaya Institut ingin mendeteksi secepat mungkin siswa yang mungkin akan melakukan dropout sehingga dapat diberi bimbingan khusus.
- 
+Oleh karena itu, Jaya Jaya Institut ingin mendeteksi secepat mungkin siswa yang mungkin akan melakukan dropout sehingga dapat diberi bimbingan khusus. Mereka meminta bantuan untuk dibuatkan dashboard agar memduahkan mereka dalam memahami data dan memonitor performa siswa.
+Selain dashboard yang diminta untuk memonitor performa siswanya, kita perlu membuat model prediction menggunakan bantuan machine learning untuk membantu mendeteksi siswa yang mungkin akan dropout berdasarkan faktor-faktor yang mempengaruhinnya secara cepat.
+
 ### Permasalahan Bisnis
 
-Mereka meminta bantuan untuk dibuatkan dashboard agar memduahkan mereka dalam memahami data dan memonitor performa siswa.
-Selain dashboard yang diminta untuk memonitor performa siswanya, kita perlu membuat model prediction menggunakan bantuan machine learning untuk membantu mendeteksi siswa yang mungkin akan dropout berdasarkan faktor-faktor yang mempengaruhinnya secara cepat.
+Hingga saat ini tingkat dropout siswa mencapai lebih dari 30%, jumlah dropout yang tinggi ini tentunya menjadi salah satu masalah yang besar untuk sebuah institusi pendidikan. Jika tidak segera diselesaikan dan terus berlanjut, ini dapat memperburuk citra institusi pendidikan kedepannya.
 
 ### Cakupan Proyek
 
@@ -24,10 +24,20 @@ Dan terakhir akan kita buatkan web app pada streamlit yang dapat digunakan untuk
 Sumber data: [data.csv](https://raw.githubusercontent.com/dicodingacademy/dicoding_dataset/main/students_performance/data.csv)
 
 Setup environment:
-1. Buka file notebook.ipynb pada Google Colaboratory
-2. Jalankan kode berikut
+- Via Google Colabolatory:
+   1. Buka file notebook.ipynb pada Google Colaboratory
+   2. Jalankan kode berikut
+      ```
+      !pip install -r requirements.txt
+      ```
+- Via Local:
+   Jalankan kode berikut pada terminal/shell
    ```
-   !pip install -r requirements.txt
+   mkdir student_dropout_analysis
+   cd student_dropout_analysis
+   pipenv install
+   pipenv shell
+   pip install -r requirements.txt
    ```
 
 ### Run Streamlit App
@@ -35,38 +45,39 @@ Setup environment:
 ```
 streamlit run app.py
 ```
-Link Streamlit App Prediction: [attrition-predictor](https://attrition-predictor.streamlit.app/)
+Link Streamlit App Prediction: [Streamlit Web App](https://student-dropout-analysis-msyarif.streamlit.app/)
 
 ## Business Dashboard
 
-Berdasarkan dashboard yang telah dibuat, berikut ini adalah beberapa insight yang diperoleh:
-- Karyawan yang berumur 18-26 tahun memiliki presentase tingkat attrition yang lebih tinggi.
-- gender tidak memiliki pengaruh terhadap attrition.
-- Karyawan yang belum menikah memiliki tingkat attrition yang lebih tinggi dibandingkan dengan kategori lain pada status perkawinan.
-- Karyawan dengan latar belakang pendidikan dibidang Technical Degree memiliki tingkat attrition tertinggi dibanding bidang lain, namun perbedaan tingkat attrition antar bidang tidak terlalu signifikan.
-- Karyawan dengan pendapatan perbulan antara 1k-4k lebih memungkinkan untuk resign.
-- Karyawan dengan jumlah tahun kerja kurang dari 3 tahun memiliki persentase resign lebih tinggi. *(Pada grafik ini karyawan dengan total working years 40 tahun kita abaikan karena sudah berumur kurang lebih 60 tahun, yang mana merupakan rata-rata orang berhenti bekerja)*
-- Karyawan yang bekerja melebihi waktu kerja/lembur lebih mungkin untuk resign.
-- Karyawan dengan tingkat level pekerjaan yang paling rendah lebih cenderung untuk resign.
-- Posisi/peran pekerjaan yang memiliki tingkat presentase resign tertinggi adalah Sales Representative, perbedaannya cukup signifikan jika dibandingkan dengan peran lain.
+Berdasarkan business dashboard yang telah dibuat, berikut ini adalah beberapa insight yang diperoleh:
+- Siswa yang status pekerjaan orang tua baik ayah maupun ibunya masih mengenyam pendidikan dan kualifikasi orang tuanya tidak diketahui/unknown lebih berpotensi tidak mampu menyelesaikan masa studinya.
+- Dari total siswa yang sudah tidak terdaftar sebagai siswa jaya-jaya institut, yang mengambil jurusan teknik informatika/informatics engineering sebesar 87% siswanya tidak berhasil lulus pada masa studinya, ini perlu menjadi perhatian khusus.
+- Siswa yang memilih jenis melamar 'Berusia lebih dri 23 tahun'/*Over 23 years old* dan 'Pemegang kursus/jurusan lain yang lebih tinggi'*Holders of other higher courses* memiliki tingkat dropout yang paling tinggi dibandingkan jenis lain.
+- Siswa pemegang beasiswa lebih terobsesi untuk menyelesaikan masa studinya dibandingkan siswa yang bukan pemegang beasiswa.
+- Siswa yang tuition fees nya tidak up to date memiliki kecenderungan untuk dropout.
+- Jumlah unit-unit kurikuler yang disetujui pada semester satu dan dua memiliki korelasi negatif dengan tingkat dropout siswa, maka semakin banyak jumlah unit-unit kurikuler siswa yang disetujui, semakin rendah kemungkinan siswa untuk dropout. Analisis korelasi ini memiliki nilai p-value < 0.05 dan R-Squared sebesar 0.54 pada semester 1 dan 0.36 pada semester 2, artinya variabel ini memiliki pengaruh yang kuat terhadap variabel dropout rate dan sebesar 36% - 54% variabilitas dari variabel 'dropout rate' dapat dijelaskan oleh variabel 'jumlah unit-unit kurikuler yang disetujui pada semester satu dan dua'.
+- Sejalan dengan faktor sebelumnya, nilai unit-unit kurikuler siswa semester satu dan dua juga memiliki hubungan korelasi negatif yang kuat terhadap tingkat dropout siswa, semakin rendah nilai unit-unit kurikuler yang diperoleh siswa pada semester satu dan dua maka semakin tinggi tingkat kemungkinan untuk dropoutnya, namun variabilitas variabel dropout rate yang dapat dijelaskan oleh variabel ini hanya sebesar 7%. Selain itu terdapat temuan bahwa siswa yang memiliki nilai unit-unit kurikuler 0 pada semester satu dan dua memiliki tingkat dropout sekitar 90%. 
 
 Link dashboard yang dapat diakses: [Tableau Dashboard Visualization](https://public.tableau.com/views/studentperformanceanalysis_17181749958020/Home?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link).
 
 ## Conclusion
 
-Berdasarkan analisis korelasi heatmap, visualisasi, dan machine learning feature yang paling berpengaruh secara signifikan baik secara positif maupun negatif terhadap attrition karyawan adalah Age, Monthly Income, OverTime, dan Total Working Years.
+Berdasarkan analisis korelasi, visualisasi, dan machine learning feature yang menjadi faktor yang berpengaruh terhadap attrition karyawan secara signifikan baik secara positif maupun negatif antara lain Curricular units 1st sem grade, Curricular units 2nd sem grade, Curricular units 1st sem approved, Curricular units 2nd sem approved, Course, dan Tuition fees up to date.
 
-Karyawan yang mengalami Over Time, karyawan yang berumur muda(18-26 tahun), yang memiliki pendapatan perbulan cenderung rendah(1k-4k), dan total tahun kerja yang relatif rendah(kurang dari 3 tahunn) merupakan karakteristik karyawan yang lebih berpotensi untuk keluar dari pekerjaannya.
+Siswa yang cenderung dropout memiliki karakteristik antara lain:
+- Unit kurikulum yang disetujui berjumlah antara 0-3 dan memiliki nilai unit-unit kurikulum 0 baik pada semester 1 maupun semester 2.
+- Tuition fees yang tidak up to date.
+Selain itu siswa yang mengambil kursus/jurusan teknik informatika sebagian besar tidak lulus pada masa studinya.
 
-Selain itu karakteristik tambahan yang juga dapat mempengaruhi kemungkinan karyawan untuk resign antara lain: karyawan yang belum menikah, karyawan dengan peran/posisi sebagai Sales Representative, dan karyawan yang memiliki level pekerjaan yang rendah.
+Selain itu karakteristik tambahan yang juga dapat mempengaruhi kemungkinan siswa untuk dropout antara lain: siswa yang jenis lamaran/application mode nya memilih opsi Over 23 years old dan Holders of other higher courses, siswa yang status pekerjaan ayah maupun ibunya student/masih mengenyam pendidikan, dan siswa yang status kualifikasi ayah maupun ibunya tidak diketahui. Disamping itu siswa pemegang beasiswa pastinya lebih bertanggung jawab pada komitmen yang diambilnya sehingga lebih kecil kemungkinan untuk dropout dibandingkan yang bukan pemegang beasiswa.
 
-### Rekomendasi Action Items (Optional)
+### Rekomendasi Action Items
 
-Beberapa rekomendasi aksi yang dapat dilakukan untuk memperbaiki tingkat attrition karyawan saat ini antara lain:  
-- Perusahaan mungkin dapat memberikan jalan karir yang jelas kepada karyawan muda agar mereka merasa terdorong untuk tetap bertahan di perusahaan. Ini bisa meliputi program pengembangan, pelatihan, atau mentorship yang ditujukan khusus untuk mereka.
-- Perusahaan dapat memantau dan mengatur jam kerja karyawan secara bijak agar tidak terjadi beban kerja yang berlebihan dan berpotensi menimbulkan atrisi.
-- Tinjau kembali kebijakan kompensasi perusahaan untuk memastikan bahwa gaji yang ditawarkan kompetitif dan sesuai dengan kontribusi yang karyawan berikan.
-- Tinjau kembali proses onboarding perusahaan untuk memastikan bahwa karyawan baru mendapatkan dukungan dan pembekalan yang cukup untuk berhasil dalam peran mereka.
-- Perusahaan mungkin dapat mempertimbangkan program dukungan atau kasejahteraan karyawan seperti dukungan sosial, program mentoring, atau kegiatan sosial untuk memperkuat ikatan antarkaryawan.
-- Perusahaan dapat mengidentifikasi posisi Sales Representative, kemudian kembangkan strategi retensi khusus untuk mempertahankan karyawan yang mengisi peran tersebut.
-- Lakukan analisis untuk memahami kebutuhan dan harapan karyawan dengan tingkat level pekerjaan yang paling rendah.
+Beberapa rekomendasi aksi yang mungkin dapat dilakukan untuk memperbaiki tingkat dropout siswa antara lain:
+- Kumpulkan feedback/umpan balik dari siswa mengenai kendala yang mereka hadapi terkait akademik maupun pembayaran studi.
+- Identifikasi siswa yang berisiko tinggi sejak awal dan berikan bimbingan tambahan serta dukungan akademis secara intensif.
+- Lakukan survei dan analisis terhadap siswa yang memiliki nilai 0.
+-  Lakukan survei terhadap siswa jurusan Informatics Engineering untuk memahami alasan spesifik mereka, dan lakukan analisis lanjutan untuk mengidentifikasi faktor-faktor seperti kesulitan akademis, beban kurikulum atau faktor lain.
+- Sediakan kelas remedial dan workshop untuk membantu siswa memperbaiki pemahaman dan keterampilan mereka dalam mata pelajaran yang sulit.
+- Tingkatkan akses dan jumlah beasiswa atau program bantuan keuangan bagi siswa yang berisiko tinggi dropout.
+- Tawarkan opsi pembelajaran yang lebih fleksibel, seperti kelas malam atau online, untuk mengakomodasi kebutuhan siswa yang mungkin memiliki komitmen lain (misalnya pekerjaan atau kursus lain). Sediakan juga jalur cepat untuk siswa yang sudah memiliki kualifikasi tinggi agar tidak perlu mengulang mata pelajaran yang sudah mereka kuasai.

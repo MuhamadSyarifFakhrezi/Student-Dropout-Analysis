@@ -62,9 +62,9 @@ Link dashboard yang dapat diakses: [Tableau Dashboard Visualization](https://pub
 
 ## Conclusion
 
-Berdasarkan analisis korelasi, visualisasi, dan machine learning feature yang menjadi faktor yang berpengaruh terhadap attrition karyawan secara signifikan baik secara positif maupun negatif antara lain Curricular units 1st sem grade, Curricular units 2nd sem grade, Curricular units 1st sem approved, Curricular units 2nd sem approved, Course, dan Tuition fees up to date.
+Berdasarkan analisis korelasi, visualisasi, dan machine learning, dari keseluruhan feature yang terdapat pada data, feature yang menjadi faktor yang paling berpengaruh antara lain Curricular units 1st sem grade, Curricular units 2nd sem grade, Curricular units 1st sem approved, Curricular units 2nd sem approved, Course, dan Tuition fees up to date.
 
-Siswa yang cenderung dropout memiliki karakteristik antara lain:
+Siswa yang cenderung dropout memiliki karakteristik:
 - Unit kurikulum yang disetujui berjumlah antara 0-3 dan memiliki nilai unit-unit kurikulum 0 baik pada semester 1 maupun semester 2.
 - Tuition fees yang tidak up to date.
 Selain itu siswa yang mengambil kursus/jurusan teknik informatika sebagian besar tidak lulus pada masa studinya.

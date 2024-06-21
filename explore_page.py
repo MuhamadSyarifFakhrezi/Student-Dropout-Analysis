@@ -21,7 +21,7 @@ with tab1:
     #### Percentage by Graduation Status
     '''
     )
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(8, 4))
     ax.pie(explore_df.groupby('Status').Status.count(), labels=['Dropout', 'Graduate'], autopct='%.1f%%', colors=['#FFDE59', '#3E397A'])
 
     st.pyplot(fig)
@@ -48,7 +48,7 @@ with tab2:
     #### Percentage by Graduation Status
     '''
     )
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots(figsize=(8, 4))
     ax.pie(enrolled_df.groupby('Status').Status.count(), labels=['Dropout', 'Graduates'], autopct='%.1f%%', colors=['#FFDE59', '#3E397A'])
 
     st.pyplot(fig)

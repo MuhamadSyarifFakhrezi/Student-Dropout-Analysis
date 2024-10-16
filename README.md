@@ -1,11 +1,7 @@
-# Proyek Akhir: Menyelesaikan Permasalahan Institusi Pendidikan
-
 ## Business Understanding
+Meskipun telah mencetak banyak lulusan dengan reputasi yang sangat baik, akan tetapi terdapat banyak siswa yang tidak menyelesaikan pendidikannya alias dropout, oleh karena itu Jaya Jaya Institut ingin mendeteksi secepat mungkin siswa yang mungkin akan melakukan dropout sehingga dapat diberi bimbingan khusus. Mereka membutuhkan dashboard untuk  memudahkan mereka dalam memahami data dan memonitor performa siswa.
 
-Jaya Jaya Institut merupakan salah satu institusi pendidikan perguruan yang telah berdiri sejak tahun 2000. Hingga saat ini ia telah mencetak banyak lulusan dengan reputasi yang sangat baik. Akan tetapi, terdapat banyak juga siswa yang tidak menyelesaikan pendidikannya alias dropout.
-
-Oleh karena itu, Jaya Jaya Institut ingin mendeteksi secepat mungkin siswa yang mungkin akan melakukan dropout sehingga dapat diberi bimbingan khusus. Mereka meminta bantuan untuk dibuatkan dashboard agar memudahkan mereka dalam memahami data dan memonitor performa siswa.
-Selain dashboard yang diminta untuk memonitor performa siswanya, kita perlu membuat model prediction menggunakan bantuan machine learning untuk membantu mendeteksi siswa yang mungkin akan dropout berdasarkan faktor-faktor yang mempengaruhinnya secara cepat.
+Selain dashboard untuk memonitor performa siswanya, diperlukan juga model prediction untuk membantu mendeteksi siswa yang mungkin akan dropout berdasarkan faktor-faktor yang mempengaruhinnya secara cepat.
 
 ### Permasalahan Bisnis
 
@@ -25,7 +21,7 @@ Sumber data: [data.csv](https://raw.githubusercontent.com/dicodingacademy/dicodi
 
 Setup environment:
 - Via Google Colabolatory:
-   1. Buka file notebook.ipynb pada Google Colaboratory
+   1. Buka file [notebook.ipynb](https://github.com/MuhamadSyarifFakhrezi/Student-Dropout-Analysis/blob/main/notebook.ipynb) pada Google Colaboratory
    2. Jalankan kode berikut
       ```
       !pip install -r requirements.txt
@@ -48,6 +44,12 @@ streamlit run app.py
 Link Streamlit App Prediction: [Streamlit Web App](https://student-dropout-analysis-msyarif.streamlit.app/)
 
 ## Business Dashboard
+![muhamadsyarif-dashboard 2 (copy)](https://github.com/user-attachments/assets/f24e7d10-74dc-49cb-a97d-7602d29b22be)
+![muhamadsyarif-dashboard 1 (copy)](https://github.com/user-attachments/assets/3b43c816-7878-4d32-a0b3-230f9dd54b78)
+![muhamadsyarif-dashboard 5 (copy)](https://github.com/user-attachments/assets/7ba2b97e-ef77-4166-b23f-a56b2ac062fa)
+![muhamadsyarif-dashboard 4 (copy)](https://github.com/user-attachments/assets/6619d3cf-a012-49f3-91e2-e9c60fa93639)
+![muhamadsyarif-dashboard 3 (copy)](https://github.com/user-attachments/assets/de55d9d0-0724-44f0-aaaf-7d3d32f902c7)
+
 
 Berdasarkan business dashboard yang telah dibuat, berikut ini adalah beberapa insight yang diperoleh:
 - Siswa yang status pekerjaan orang tua baik ayah maupun ibunya masih mengenyam pendidikan dan kualifikasi orang tuanya tidak diketahui/unknown lebih berpotensi tidak mampu menyelesaikan masa studinya.

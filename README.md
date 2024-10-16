@@ -44,12 +44,11 @@ streamlit run app.py
 Link Streamlit App Prediction: [Streamlit Web App](https://student-dropout-analysis-msyarif.streamlit.app/)
 
 ## Business Dashboard
-![muhamadsyarif-dashboard 2 (copy)](https://github.com/user-attachments/assets/f24e7d10-74dc-49cb-a97d-7602d29b22be)
 ![muhamadsyarif-dashboard 1 (copy)](https://github.com/user-attachments/assets/3b43c816-7878-4d32-a0b3-230f9dd54b78)
-![muhamadsyarif-dashboard 5 (copy)](https://github.com/user-attachments/assets/7ba2b97e-ef77-4166-b23f-a56b2ac062fa)
-![muhamadsyarif-dashboard 4 (copy)](https://github.com/user-attachments/assets/6619d3cf-a012-49f3-91e2-e9c60fa93639)
+![muhamadsyarif-dashboard 2 (copy)](https://github.com/user-attachments/assets/f24e7d10-74dc-49cb-a97d-7602d29b22be)
 ![muhamadsyarif-dashboard 3 (copy)](https://github.com/user-attachments/assets/de55d9d0-0724-44f0-aaaf-7d3d32f902c7)
-
+![muhamadsyarif-dashboard 4 (copy)](https://github.com/user-attachments/assets/6619d3cf-a012-49f3-91e2-e9c60fa93639)
+![muhamadsyarif-dashboard 5 (copy)](https://github.com/user-attachments/assets/7ba2b97e-ef77-4166-b23f-a56b2ac062fa)
 
 Berdasarkan business dashboard yang telah dibuat, berikut ini adalah beberapa insight yang diperoleh:
 - Siswa yang status pekerjaan orang tua baik ayah maupun ibunya masih mengenyam pendidikan dan kualifikasi orang tuanya tidak diketahui/unknown lebih berpotensi tidak mampu menyelesaikan masa studinya.
